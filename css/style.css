@@ -1,0 +1,165 @@
+:root {
+  --primary: #292d3e;
+  --secondary : #747da3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  border: 0;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  color: #fff !important;
+}
+
+body {
+  background-color: var(--primary) !important;
+}
+
+.bg-form {
+  background-color: var(--primary) !important;
+  border-radius: 3vh !important;
+}
+
+.bp {
+  background-color: var(--primary) !important;
+}
+
+.bt {
+  background-color: #747da3 !important;
+}
+
+.bg-dark {
+  border-radius: 5vh;
+}
+
+.card-img-top {
+  height: 65vh;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+select {
+  background-color: #747da3 !important;
+}
+
+.nav-link.active.mc {
+  background-color: #747da3 !important;
+}
+
+.dropdown-menu {
+  background-color: #747da3 !important;
+}
+
+.about {
+  background-color: #747da3 !important;
+  border-radius: 3vh;
+  margin: 4%;
+  padding: 3%;
+}
+
+.am {
+  text-decoration: underline;
+  text-align: center;
+}
+
+/* Navbar */
+.container {
+    margin-top: 1%;
+    color: #fff;
+}
+
+.navbar {
+  background-color: transparent;
+  color: #fff !important;
+}
+
+.nav-item {
+  padding-left: 3vh;
+  padding-right: 3vh;
+  font-size: smaller;
+  
+}
+
+.form-control {
+    background-color: #747da3 !important; 
+}
+
+.recommended {
+    display: flex;
+    margin: 5%;
+    width: 80%;
+    margin-left: auto;
+}
+
+.left-recommended {
+    width: 50%;
+}
+
+.left-recommended p {
+    color: #8f8f91 !important;
+    font-size: small;
+    line-height: 4vh;
+    text-align: justify;
+}
+
+.right-recommended {
+    width: 50%;
+}
+
+.right-recommended img {
+    width: 55%;
+    margin: 15vh;
+    margin-left: 15vh;
+    align-items: center;
+}
+
+.btn-recommended {
+    border-radius: 3vh;
+    background-color: #747da3;
+    margin: 2vh;
+    padding: 2vh;
+    font-size: small;
+}
+
+.btn-cl {
+    border-radius: 3vh;
+    background-color: var(--secondary) !important;
+    margin: 2vh;
+    padding: 2vh;
+    font-size: small;
+    margin-top: auto;
+}
+
+.page-link {
+ background-color: #747da3 !important;
+}
+
+.active>.page-link, .page-link.active {
+  border-color: #ffffff!important;
+  background-color: #292d3e !important;
+}
+
+.list {
+  width: 25%;
+  height: 30%;
+}
+
+.footer-section {
+  background-color: #114041;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  bottom: 0;
+}
+
+.footer-section p {
+  margin-bottom: 0;
+}
