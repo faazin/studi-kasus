@@ -1,16 +1,20 @@
 <?php
 include_once("../../../koneksi.php");
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+$mangaTitle = $_POST["manga_title"];
+$genreIds = $_POST["genre_name"];
 
-    $mangaId = $_POST["manga_id"];
-    $genreId = $_POST["genre_id"];
-
-    $queryMangaGenre = "INSERT INTO manga_genre (`manga_id`, `genre_id`) VALUES ('$mangaId', '$genreId')";
+$genreIdsString = implode(",", $genreIds);
+$queryMangaGenre = "INSERT INTO `manga_genre` (`manga_id`, `genre_id`) VALUES ";
+$valueStrings = array();
+foreach ($genreIds as $genreId) {
+    $valueStrings[] = "('$mangaTitle', '$genreId')";
 }
+$queryMangaGenre .= implode(",", $valueStrings);
+
+mysqli_query($conn, $queryMangaGenre);
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 header("Location:../../../index.php");
-?>

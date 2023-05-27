@@ -26,12 +26,12 @@
                             Add Data
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="manage/crud/manga/tambah.php" target="_blank">Data Manga</a></li>
-                            <li><a class="dropdown-item" href="manage/crud/genre/tambah.php" target="_blank">Data Genre</a></li>
+                            <li><a class="dropdown-item" href="manage/crud/manga/tambah.php">Data Manga</a></li>
+                            <li><a class="dropdown-item" href="manage/crud/genre/tambah.php">Data Genre</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="manage/crud/mage/tambah.php" target="_blank">Data Manga Genre</a></li>
+                            <li><a class="dropdown-item" href="manage/crud/mage/tambah.php">Data Manga Genre</a></li>
                         </ul>
                     </li>
                 </ul>

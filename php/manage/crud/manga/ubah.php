@@ -1,10 +1,10 @@
-<?php 
+<?php
 include_once("../../../koneksi.php");
 $id = $_GET["id"];
 
 $query = mysqli_query($conn, "SELECT * FROM `manga` WHERE id='$id'");
 
-while($manga = mysqli_fetch_array($query)){
+while ($manga = mysqli_fetch_array($query)) {
     $manga_title = $manga['manga_title'];
     $author = $manga['author'];
     $gambar = $manga['gambar'];
@@ -27,28 +27,28 @@ while($manga = mysqli_fetch_array($query)){
 
 <div class="container about p-5">
     <h4 class="ms-4">Update Data Manga</h4>
-        <form action="prosesubah.php?id=<?php echo $id ?>" method="post">
-            <div class="mb-3">
-                <label class="form-label">Manga Title</label>
-                <input type="text" class="form-control" name="manga_title" value="<?php echo $manga_title ?>">
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Author</label>
-                <input type="text" class="form-control" name="author" value="<?php echo $author ?>"> 
-            </div>
-            <div class="mb-3 ">
-                <label class="form-label">Gambar</label>
-                <img src="../../../../img/cover/<?php echo $gambar ?>" alt="" class="form-control" style="width: 20vh !important;">
-                <input type="file" class="form-control" name="gambar" value="<?php echo $gambar ?>">
-            </div>
-            <div class="mb-3 ">
-                <label class="form-label">Start Year</label>
-                <input type="number" class="form-control" name="start_year" value="<?php echo $start_year ?>">
-            </div>
-            <div class="mb-3 ">
-                <label class="form-label">End Year</label>
-                <input type="number" class="form-control" name="end_year" value="<?php echo $end_year ?>">
-            </div>
-            <button type="submit" class="btn btn-dark">Submit</button>
-        </form>
-    </div>
+    <form action="prosesubah.php?id=<?php echo $id ?>" method="post">
+        <div class="mb-3">
+            <label class="form-label">Manga Title</label>
+            <input type="text" class="form-control" name="manga_title" value="<?php echo $manga_title ?>">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Author</label>
+            <input type="text" class="form-control" name="author" value="<?php echo $author ?>">
+        </div>
+        <div class="mb-3 ">
+            <label class="form-label">Gambar</label>
+            <img src="../../../../img/cover/<?php echo $gambar ?>" alt="" class="form-control" style="width: 20vh !important;">
+            <input type="file" class="form-control" name="gambar" value="<?php echo $gambar ?>">
+        </div>
+        <div class="mb-3 ">
+            <label class="form-label">Start Year</label>
+            <input type="number" class="form-control" name="start_year" value="<?php echo $start_year ?>">
+        </div>
+        <div class="mb-3 ">
+            <label class="form-label">End Year</label>
+            <input type="number" class="form-control" name="end_year" value="<?php echo $end_year ?>">
+        </div>
+        <button type="submit" class="btn btn-dark">Submit</button>
+    </form>
+</div>

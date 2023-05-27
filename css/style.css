@@ -12,6 +12,7 @@
   text-decoration: none;
   font-family: "Poppins", sans-serif;
   color: #fff !important;
+  height: 100%;
 }
 
 body {
@@ -56,6 +57,10 @@ select {
 
 .dropdown-menu {
   background-color: #747da3 !important;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: var(--primary) !important;
 }
 
 .about {
@@ -157,9 +162,7 @@ select {
   color: #fff;
   padding: 20px 0;
   text-align: center;
+  position: fixed ;
   bottom: 0;
 }
 
-.footer-section p {
-  margin-bottom: 0;
-}

@@ -27,7 +27,8 @@ $query = mysqli_query($conn, "SELECT * FROM `manga_genre`");
                     <td><?php echo $data["genre_id"]; ?></td>
                     <td>
                         <!-- <a href="../manage/crud/mage/ubah.php">Edit</a> -->
-                        <a href="../../../manage/crud/mage/hapus.php" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</a>
+                        <a href="./manage/crud/genre/hapus.php?manga_id=<?php echo $data["manga_id"]; ?>&genre_id=<?php echo $data["genre_id"]; ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</a>
+
                     </td>
                 </tr>
             <?php $no++;

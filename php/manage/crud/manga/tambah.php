@@ -15,7 +15,7 @@
 <body>
 
     <div class="container about p-5">
-    <h4 class="ms-4">Add Data Manga</h4>
+        <h4 class="ms-4">Add Data Manga</h4>
         <form action="prosestambah.php" method="post" class="px-auto py-auto" enctype="multipart/form-data">
             <div class="mb-3">
                 <label class="form-label">Manga Title</label>
@@ -23,7 +23,7 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">Author</label>
-                <input type="text" class="form-control" name="author"> 
+                <input type="text" class="form-control" name="author">
             </div>
             <div class="mb-3 ">
                 <label class="form-label">Gambar</label>

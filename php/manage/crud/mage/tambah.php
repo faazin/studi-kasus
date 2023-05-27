@@ -24,46 +24,45 @@ $resultGenre = $conn->query($queryGenre);
 </head>
 
 <body>
-
     <div class="container about p-5">
         <h4 class="ms-4">Add Data Manga Genre</h4>
         <form action="prosestambah.php" method="post" class="px-auto py-auto" enctype="multipart/form-data">
             <div class="mb-3">
                 <label class="form-label">Manga</label>
                 <select class="form-control" name="manga_title">
-                <?php
+                    <?php
 
-                if ($resultManga->num_rows > 0) {
-    
-                    while ($rowManga = $resultManga->fetch_assoc()) {
-                        $mangaId = $rowManga["id"];
-                        $mangaTitle = $rowManga["manga_title"];
-                        echo '<option value="' . $mangaId . '">' . $mangaTitle . '</option>';
+                    if ($resultManga->num_rows > 0) {
+
+                        while ($rowManga = $resultManga->fetch_assoc()) {
+                            $mangaId = $rowManga["id"];
+                            $mangaTitle = $rowManga["manga_title"];
+                            echo '<option value="' . $mangaId . '">' . $mangaTitle . '</option>';
+                        }
+                    } else {
+                        echo '<option value="">No manga available</option>';
                     }
-                } else {
-                    echo '<option value="">No manga available</option>';
-                }
 
-                ?>
+                    ?>
                 </select>
             </div>
             <div class="mb-3">
                 <label class="form-label">Genre</label>
                 <select class="form-control" name="genre_name[]" multiple>
-                <?php
+                    <?php
 
-                if ($resultGenre->num_rows > 0) {
+                    if ($resultGenre->num_rows > 0) {
 
-                    while ($rowGenre = $resultGenre->fetch_assoc()) {
-                        $genreId = $rowGenre["genre_id"];
-                        $genreName = $rowGenre["genre_name"];
-                        echo '<option value="' . $genreId . '">' . $genreName . '</option>';
+                        while ($rowGenre = $resultGenre->fetch_assoc()) {
+                            $genreId = $rowGenre["genre_id"];
+                            $genreName = $rowGenre["genre_name"];
+                            echo '<option value="' . $genreId . '">' . $genreName . '</option>';
+                        }
+                    } else {
+                        echo '<option value="">No genre available</option>';
                     }
-                } else {
-                    echo '<option value="">No genre available</option>';
-                }
 
-                ?>
+                    ?>
                 </select>
                 <div class="form-text">* Use the ctrl key to select more than 1 genre</div>
             </div>

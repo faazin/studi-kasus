@@ -13,8 +13,8 @@
 </head>
 
 <body>
-<div class="container about p-5">
-    <h4 class="ms-4">Add Data Genre</h4>
+    <div class="container about p-5">
+        <h4 class="ms-4">Add Data Genre</h4>
         <form action="prosestambah.php" method="post" class="px-auto py-auto">
             <div class="mb-3">
                 <label class="form-label">Genre Name</label>

@@ -1,10 +1,10 @@
-<?php 
+<?php
 include_once("../../../koneksi.php");
 $id = $_GET["genre_id"];
 
 $query = mysqli_query($conn, "SELECT * FROM `genre` WHERE `genre_id`='$id'");
 
-while($genre = mysqli_fetch_array($query)){
+while ($genre = mysqli_fetch_array($query)) {
     $genre_name = $genre['genre_name'];
 }
 ?>
@@ -23,11 +23,17 @@ while($genre = mysqli_fetch_array($query)){
 
 <div class="container about p-5">
     <h4 class="ms-4">Add Data Genre</h4>
-        <form action="prosesubah.php?genre_id=<?php echo $id ?>" method="post" class="px-auto py-auto">
-            <div class="mb-3">
-                <label class="form-label">Genre Name</label>
-                <input type="text" class="form-control" name="genre_name" value="<?php echo $genre_name ?>">
-            </div>
-            <button type="submit" class="btn btn-dark">Submit</button>
-        </form>
+    <form action="prosesubah.php?genre_id=<?php echo $id ?>" method="post" class="px-auto py-auto">
+        <div class="mb-3">
+            <label class="form-label">Genre Name</label>
+            <input type="text" class="form-control" name="genre_name" value="<?php echo $genre_name ?>">
+        </div>
+        <button type="submit" class="btn btn-dark">Submit</button>
+    </form>
+</div>
+
+<footer class="footer-section" id="footer">
+    <div class="container">
+        <p>&copy; 2023 Created By. Fadlan Fauzi Muttaqin</p>
     </div>
+</footer>
