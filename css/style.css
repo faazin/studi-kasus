@@ -12,7 +12,6 @@
   text-decoration: none;
   font-family: "Poppins", sans-serif;
   color: #fff !important;
-  height: 100%;
 }
 
 body {
@@ -162,7 +161,6 @@ select {
   color: #fff;
   padding: 20px 0;
   text-align: center;
-  position: fixed ;
   bottom: 0;
 }
 
